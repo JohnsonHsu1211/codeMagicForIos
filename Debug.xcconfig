@@ -1,0 +1,13 @@
+//
+//  Debug.xcconfig
+//  CodeMagicDemo
+//
+//  Created by Johnson Hsu on 2022/6/13.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+AK_APP_NAME = CodeMagicDemoStage Debug
+AK_APP_BUNDLE_ID = net.artkernel.CodeMagicDemoDebug
+AK_APP_VERSION = 0.3
