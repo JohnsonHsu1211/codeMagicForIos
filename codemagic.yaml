@@ -7,6 +7,7 @@ workflows:
             - app_store_connect
             - fastlane
           cocoapods: default
+          ruby: 2.6.10p210
         triggering:
           events:
             - push
