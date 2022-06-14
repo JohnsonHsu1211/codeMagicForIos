@@ -1,0 +1,21 @@
+workflows:
+    release-workflow:
+        name: Release iOS
+        instance_type: mac_pro
+        environment:
+          groups:
+            - app_store_connect
+            - fastlane
+          cocoapods: default
+        triggering:
+          events:
+            - push
+          branch_patterns:
+            - pattern: master
+        scripts:
+          - bundle install
+          - bundle exec fastlane beta
+        publishing:
+            email:
+                recipients:
+                    - johnson.hsu@artkernel.net
