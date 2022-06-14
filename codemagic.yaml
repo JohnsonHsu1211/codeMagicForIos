@@ -7,14 +7,13 @@ workflows:
             - app_store_connect
             - fastlane
           cocoapods: default
-          ruby: 2.6.10
         triggering:
           events:
             - push
           branch_patterns:
             - pattern: master
         scripts:
-          - bundle update --bundler
+          - gem install bundler:2.2.27
           - bundle install
           - bundle exec fastlane beta
         publishing:
