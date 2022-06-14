@@ -13,7 +13,10 @@ workflows:
           branch_patterns:
             - pattern: master
         scripts:
-          - gem install bundler:2.2.27
+          - name: Setting up keychain
+            script: |
+              set -e
+              keychain initialize -p ~/match.keychain
           - bundle install
           - bundle exec fastlane beta
         publishing:

@@ -28,15 +28,6 @@ platform :ios do
       in_house: false,
     )
 
-    create_keychain(
-      name: ENV['AK_KEYCHAIN_NAME'],
-      password: ENV['AK_KEYCHAIN_PASS'],
-      default_keychain: true,
-      unlock: true,
-      timeout: 3600,
-      add_to_search_list: true
-    ) 
-
     match(type: "appstore",
       readonly: true,
       app_identifier: "net.artkernel.CodeMagicDemo2",
